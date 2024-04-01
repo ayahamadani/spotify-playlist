@@ -1,14 +1,10 @@
 /* Color Classes */
-.B2E2E {
-  background-color: #2b2e2e;
-}
-
 .C1E1E {
-  background-color: #1c1e1e;
+  background-color: #200a0f;
 }
 
 .A3A {
-  background-color: #363a3a;
+  background-color: #3e131c;
 }
 
 .C5C7C3 {
@@ -19,8 +15,19 @@
   color: white;
 }
 
+.fade-in-transition {
+  background-color: #321017;
+  transition: background-color 0.4s ease;
+}
+
+.fade-out-transition {
+  background-color: none;
+  transition: background-color 0.8s ease;
+}
+
 .header {
-  background: linear-gradient(to top, #313535, #171a1b);
+  background: linear-gradient(to top, #46161b, #71242c);
+  overflow: auto;
 }
 
 .header-small-font {
@@ -46,90 +53,288 @@
   max-height: 75%;
 }
 
+.hover-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 3em;
+}
+
+#pen-container {
+  margin-bottom: 3em;
+  display: none;
+}
+
+.playlist-icon-div:hover .playlist-icon {
+  filter: brightness(50%);
+}
+
+.playlist-icon-div:hover #pen-container {
+  display: block;
+}
+
+.playlist-icon-div:hover #choose-photo-text {
+  display: block;
+}
+
 .playlist-icon {
   margin: 3em 2em;
+  height: auto;
+  width: 100%;
   border-radius: 1.5%;
-  box-shadow: 1em 1em 6em rgba(0, 0, 0, 0.5);
+  display: block;
+  box-shadow: 0.7em 0.7em 0.7em rgba(0, 0, 0, 0.5);
+}
+
+.header-playlist-title {
+  padding-top: 0.7em;
+  padding-left: 2em;
+}
+
+.header-playlist-title-out-transition {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.header-playlist-title-in-transition {
+  opacity: 1;
+  transition: opacity 0.5s ease;
 }
 
 .second-row-second-div {
-  margin: 0em 5em 3em 1em;
+  margin: 0em 5em 1em 1em;
 }
 
-@media (min-width: 500px) {
-  .left-arrow-div {
-    display: none;
+.left-arrow-div {
+  display: none;
+}
+
+.header-info-div {
+  display: flex;
+}
+
+.first-header-row {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.header-info-div-mobile {
+  padding: 0.3em 0em 0em 0.8em;
+}
+
+.mobile-header {
+  display: none;
+}
+
+@media (min-width: 801px) {
+  .first-header-row {
+    display: flex;
+    justify-content: space-between;
   }
+
+  .second-header-row {
+    display: flex;
+    align-items: center;
+    padding-top: 5em;
+  }
+
   .header-info-div-mobile {
     display: none;
   }
 }
 
-@media (max-width: 1300px) {
-  .second-header-row {
-    display: block;
+@media screen and (min-width: 801px) and (max-width: 950px) {
+  #playlist-title {
+    font-size: 2.5em;
   }
 
-  .second-row-second-div {
-    margin: 0em 1em;
-  }
-
-  .playlist-icon-div {
-    display: flex;
-    justify-content: center;
-  }
-  .header-info-div {
-    padding-bottom: 2em;
+  .playlist-duration {
+    margin-left: 1em;
   }
 }
 
-@media (max-width: 300px) {
+@media screen and (min-width: 801px) and (max-width: 1000px) {
+  .header-info-div {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 0.3fr 3fr;
+    grid-gap: 1em;
+    padding-top: 0.5em;
+  }
+
+  .playlist-info-icon-img {
+    display: flex;
+    align-self: center;
+  }
+}
+
+.playlist-icon-div {
+  padding: 0em;
+  display: flex;
+  width: 30em;
+  height: 30em;
+  overflow: hidden;
+  background-size: contain;
+  position: relative;
+}
+
+@media (max-width: 800px) {
+  .playlist-icon-div {
+    width: 20em;
+    height: 20em;
+  }
+
+  .image-container {
+    height: 3em;
+  }
+
+  .icon-img {
+    height: 2em;
+  }
+
+  #playlist-title {
+    font-size: 1.8em;
+    padding: 0em 0em 0em 0.1em;
+  }
+
+  .truncated-text {
+    font-size: 1em;
+    padding: 0em 0em 0em 0.2em;
+  }
+
+  .arrow-icon-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .hover-div {
+    display: flex;
+    justify-self: center;
+  }
+
   .first-header-row {
     display: none;
   }
 
-  .second-row-second-div {
-    margin: 0em 1em;
+  .left-arrow-div {
+    display: block;
+    font-size: 1.2em;
+    margin-left: 1em;
+    margin-right: 2em;
   }
 
-  .playlist-icon-div {
-    display: flex;
-    justify-content: center;
-  }
-
-  .playlist-icon {
-    width: 50%;
-    border-radius: 0%;
-    margin: 2em 2em;
+  .second-header-row {
+    display: block;
   }
 
   .public-playlist {
     display: none;
   }
 
-  .header-big-font {
-    font-size: 2em;
-    width: 100%;
+  .header-info-div {
+    display: none;
   }
 
-  .header-small-font {
-    font-size: 1em;
-    line-height: normal;
-    padding: 1em 0em;
+  .image-transition-in {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+  }
+
+  .image-transition-out {
+    opacity: 1;
+    transition: opacity 1.5s ease;
+  }
+
+  .mobile-header {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4.5em;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: none;
+  }
+
+  .mobile-header-transition-in h2 {
+    margin-left: 0.7em;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .mobile-header-transition-out h2 {
+    margin-left: 0.7em;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+  .mobile-header-transition-in {
+    background-color: #71242c;
+    transition: background-color 1s ease;
+  }
+
+  .mobile-header-transition-out {
+    background-color: none;
+    transition: background-color 1.5s ease;
+  }
+}
+
+@media (max-width: 500px) {
+  .mobile-header h2 {
+    font-size: 1.2em;
+    margin-left: 0em;
+  }
+  .playlist-icon-div {
+    width: 20em;
+    height: 20em;
   }
 
   .left-arrow-div {
-    display: block;
-    padding: 2em 1em;
-    position: fixed;
-    top: 1em;
+    padding-left: 0.5em;
+  }
+
+  .hover-div {
+    padding-top: 0em;
+  }
+
+  #playlist-title {
+    padding-left: 0.4em;
   }
 
   .header-info-div {
     display: none;
   }
 
+  .truncated-text {
+    padding-left: 0.4em;
+    line-height: 1.3em;
+    font-size: 1.3em;
+    width: 100%;
+  }
+
   .header-info-div-mobile {
-    padding: 0em 0.5em;
+    padding-left: 0.7em;
+  }
+
+  .second-row-second-div {
+    margin: 0em 1em 1em 1em;
+  }
+
+  .image-transition-in {
+    opacity: 0;
+    transition: opacity 1.5s ease;
+  }
+
+  .image-transition-out {
+    opacity: 1;
+    transition: opacity 1.5s ease;
   }
 }
