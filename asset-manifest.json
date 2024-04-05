@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/spotify-playlist/static/css/main.ff98e735.css",
-    "main.js": "/spotify-playlist/static/js/main.f761f7f7.js",
+    "main.css": "/spotify-playlist/static/css/main.5438cd04.css",
+    "main.js": "/spotify-playlist/static/js/main.4bfd3b73.js",
     "static/media/bad-bunny-andrea.mp3": "/spotify-playlist/static/media/bad-bunny-andrea.5920052865ef25423ac4.mp3",
     "static/media/brent-faiyez-role-model.mp3": "/spotify-playlist/static/media/brent-faiyez-role-model.099d01f28868f8d4c4d4.mp3",
     "static/media/laufey-from-the-start.mp3": "/spotify-playlist/static/media/laufey-from-the-start.b4b4739bc5f2115c8eb0.mp3",
@@ -20,11 +20,11 @@
     "static/media/wasteland.jpg": "/spotify-playlist/static/media/wasteland.0dca2b46ed37bfbb19de.jpg",
     "static/media/red-moon-in-venus-album-cover.jpg": "/spotify-playlist/static/media/red-moon-in-venus-album-cover.d2a81f370559899fde87.jpg",
     "index.html": "/spotify-playlist/index.html",
-    "main.ff98e735.css.map": "/spotify-playlist/static/css/main.ff98e735.css.map",
-    "main.f761f7f7.js.map": "/spotify-playlist/static/js/main.f761f7f7.js.map"
+    "main.5438cd04.css.map": "/spotify-playlist/static/css/main.5438cd04.css.map",
+    "main.4bfd3b73.js.map": "/spotify-playlist/static/js/main.4bfd3b73.js.map"
   },
   "entrypoints": [
-    "static/css/main.ff98e735.css",
-    "static/js/main.f761f7f7.js"
+    "static/css/main.5438cd04.css",
+    "static/js/main.4bfd3b73.js"
   ]
 }
