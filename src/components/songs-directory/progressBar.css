@@ -13,9 +13,6 @@
   cursor: pointer-i;
 }
 
-.range-input[type="range"]::-webkit-slider-thumb {
-}
-
 .range-input[type="range"]::-moz-range-thumb {
   width: 1em;
   height: 1em;
@@ -24,8 +21,8 @@
   cursor: pointer;
 }
 
-@media (max-width: 800px) {
-  .range-input[type="range"] {
+@media (max-width: 450px) {
+  .expanded-range-input[type="range"] {
     -webkit-appearance: none;
     appearance: none;
     background-color: #4e4e4e;
@@ -37,22 +34,21 @@
     transform: translateY(75%);
   }
 
-  .range-input[type="range"]::-webkit-slider-thumb {
+  .expanded-range-input[type="range"]::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 1px; /* Adjust the width of the thumb */
-    height: 1px; /* Adjust the height of the thumb */
-    background-color: white; /* Thumb color */
-    border-radius: 50%; /* Make the thumb circular */
-    cursor: pointer; /* Show pointer cursor */
+    width: none;
+    height: none;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
   }
 
-  .range-input[type="range"]:hover {
+  .expanded-range-input[type="range"]:hover {
     accent-color: none;
   }
 
   .range-input-container {
-    height: min-content;
     display: flex;
     flex-direction: column;
     align-items: start;
@@ -61,7 +57,7 @@
 
   .range-progress {
     height: 10px;
-    background-color: white; /* Change color as needed */
+    background-color: white;
     border-radius: 5px;
   }
 }

@@ -54,7 +54,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const triggerPosition = 350;
+      const triggerPosition = 150;
       if (window.scrollY > triggerPosition) {
         setTopDivBgColor(true);
       } else {
@@ -71,7 +71,7 @@ export default function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const triggerPosition = 440;
+      const triggerPosition = 160;
       if (window.scrollY > triggerPosition) {
         setHeaderTitleTransition(true);
       } else {
@@ -273,7 +273,10 @@ export default function Header() {
             </div>
             <div className="flex align-end gotham fs1 C5C7C3">
               <i className="fa-solid fa-globe" />
-              <h4 className="plhalf">&nbsp;1 hr 5 min</h4>
+              <h4 className="plhalf">
+                {parseInt(playlistDuration / 3600)} hrs{" "}
+                {Math.floor(playlistDuration / 60)} mins
+              </h4>
             </div>
           </div>
         </div>

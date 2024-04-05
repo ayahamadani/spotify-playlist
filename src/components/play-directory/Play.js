@@ -7,7 +7,7 @@ export default function Play() {
       <div className="justify-between play-main gotham">
         <div className="flex left-container center">
           <div className="play-btn-container circle flex w4 h4 hover">
-            <i className="fa-solid fa-play play-btn flex center fa-xl" />
+            <i className="fa-solid fa-play header-play-btn flex center fa-xl" />
           </div>
           <div className="ml2 enhance-btn hover">Enhance</div>
           <div className="ml2 download-btn-container circle w4 h4 center hover">

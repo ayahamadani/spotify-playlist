@@ -1,0 +1,71 @@
+.mobile-songs {
+  height: 100vh;
+}
+
+.expanded-bottom-elements {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.expanded-row-one {
+  padding: 1em 1em 4em 1em;
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+}
+
+.expanded-row-one i {
+  font-size: 1.5em;
+}
+
+.expanded-row-one h3 {
+  padding-right: 1em;
+}
+
+.expanded-row-one p {
+  font-size: 1.5em;
+  display: flex;
+  justify-self: flex-end;
+}
+
+.expanded-third-row {
+  width: 100%;
+  justify-content: space-between;
+  padding: 0em 1em;
+  padding-bottom: 6em;
+  margin-top: 3em;
+}
+
+.expanded-third-row .white {
+  font-size: 2em;
+}
+
+.expanded-third-row .play-btn {
+  font-size: 1.5em;
+  margin: 0em;
+  border-radius: 25px;
+  display: flex;
+  margin-top: 0.6em;
+  align-items: center;
+}
+
+.expanded-song-info .song-title-divs {
+  font-size: 1.5em;
+  padding-left: 0.7em;
+}
+
+.expanded-song-info .E6DBDB {
+  margin-top: 0.5em;
+  font-size: 1em;
+}
+
+.expanded-song-progress-div {
+  margin: 0em 1em;
+  margin-top: 2em;
+}
+
+.expanded-duration {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.2em 1em 0em 1em;
+}
