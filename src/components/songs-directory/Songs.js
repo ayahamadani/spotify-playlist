@@ -558,7 +558,12 @@ export default function Songs() {
               <div className="green mobile">
                 <i className="fa-solid fa-mobile-screen-button" />
               </div>
-              <div onClick={() => playSong(currentSongData.id)}>
+              <div
+                onClick={(e) => {
+                  e.stopPropagation();
+                  playSong(currentSongData.id);
+                }}
+              >
                 {currentSongData.isPlaying ? (
                   <i className="fa-solid fa-pause play-pause-btns" />
                 ) : (
@@ -592,7 +597,7 @@ export default function Songs() {
           <h3>Yes, i play the same 5 songs on repeat for hours.</h3>
           <p>...</p>
         </div>
-        <div className="h22 flex justify-center expanded-image">
+        <div className="flex justify-center expanded-image">
           <img
             src={currentSongData.albumCover}
             alt={currentSongData.title}
@@ -664,7 +669,9 @@ export default function Songs() {
                 <div
                   style={{ color: "#" + currentSongData.hexColor }}
                   className="bgwhite play-btn"
-                  onClick={() => playSong(currentSongData.id)}
+                  onClick={(e) => {
+                    playSong(currentSongData.id);
+                  }}
                 >
                   {currentSongData.isPlaying ? (
                     <i className="fa-solid fa-pause" />

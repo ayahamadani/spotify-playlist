@@ -1,15 +1,16 @@
 .mobile-songs {
   height: 100vh;
+  justify-content: space-around;
+  flex-direction: column;
+  display: flex;
 }
 
 .expanded-bottom-elements {
   width: 100%;
-  position: fixed;
-  bottom: 0;
 }
 
 .expanded-row-one {
-  padding: 1em 1em 4em 1em;
+  margin: 1em 1em 1em 1em;
   display: grid;
   grid-template-columns: 1fr 6fr 1fr;
 }
@@ -32,8 +33,7 @@
   width: 100%;
   justify-content: space-between;
   padding: 0em 1em;
-  padding-bottom: 6em;
-  margin-top: 3em;
+  margin-bottom: 1em;
 }
 
 .expanded-third-row .white {
@@ -68,4 +68,12 @@
   display: flex;
   justify-content: space-between;
   padding: 0.2em 1em 0em 1em;
+}
+
+.expanded-image img {
+  width: 100%;
+}
+
+.expanded-image {
+  margin: 0em 1em;
 }
